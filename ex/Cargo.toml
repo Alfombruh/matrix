@@ -1,0 +1,26 @@
+[package]
+name = "ex"
+version = "0.1.0"
+edition = "2021"
+default-run = "help"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+#[allow(dead_code)]
+#[allow(unused_variables)]
+
+[dependencies]
+ft_math = { path = "../ft_math" }
+colored = "2"
+
+[[bin]]
+path = "src/help.rs"
+name = "help"
+
+[[bin]]
+path = "src/ex00.rs"
+name = "ex00"
+
+[[bin]]
+path = "src/ex01.rs"
+name = "ex01"
