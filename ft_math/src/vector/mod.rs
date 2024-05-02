@@ -1,8 +1,9 @@
 use core::fmt::Debug;
+pub mod ex00;
 
 /* STRUCTURE DEFINITION */
 pub struct Vector<K> {
-    pub  array: Vec<K>,
+    array: Vec<K>,
 }
 
 /* CONSTRUCTORS */
@@ -18,21 +19,17 @@ impl<K> Vector<K>{
 
 /* METHOD IMPLEMENTATIONS */
 impl<K: Debug> Vector<K> {
-    pub fn add(&mut self, num: K) {
+    pub fn push(&mut self, num: K) {
         self.array.push(num);
     }
     pub fn remove_last(&mut self) {
         self.array.remove(self.array.len() - 1);
     }
-    pub fn size(&mut self) -> usize {
+    pub fn size(&self) -> usize {
         return self.array.len();
     }
-    pub fn print(&mut self) {
-        print!("Vector is == (");
-        for elem in &self.array{
-            print!("{:?}, ", elem);
-        }
-        print!(");\n");
+    pub fn print(&self) {
+        println!("{:?}", &self.array);
     }
 }
 
