@@ -14,6 +14,10 @@ ft_math = { path = "../ft_math" }
 colored = "2"
 
 [[bin]]
+path = "src/test.rs"
+name = "test"
+
+[[bin]]
 path = "src/help.rs"
 name = "help"
 

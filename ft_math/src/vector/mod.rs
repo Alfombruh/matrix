@@ -7,8 +7,12 @@ pub struct Vector<K> {
 
 /* CONSTRUCTORS */
 impl<K> Vector<K>{
-    pub fn new(values: Vec<K>) -> Self{
+    pub fn from_vec(values: Vec<K>) -> Self{
         Self {array: values}
+    }
+    pub fn from(values: &[K]) -> Self where K: Copy
+    {
+        Self {array: values.to_vec()}
     }
 }
 
