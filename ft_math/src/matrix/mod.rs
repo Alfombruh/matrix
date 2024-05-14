@@ -1,18 +1,15 @@
-use core::fmt::Debug;
-
-pub struct Matrix<T> {
-    pub array: Vec<Vec<T>>,
+pub struct Matrix {
+    pub array: Vec<Vec<f32>>,
 }
 
-impl<K: Debug> Matrix<K> {
-    pub fn from(matrix: &[&[K]]) -> Self
-    where
-        K: Copy,
+impl Matrix {
+    pub fn from(matrix: &[&[f32]]) -> Self
     {
-        let mut total: Vec<Vec<K>> = vec![];
+        let mut total: Vec<Vec<f32>> = vec![];
         let len = matrix[0].len();
         for row in matrix {
             if row.len() != len {
+                //TO-DO throw exeption
                 println!("Matrix has a line with a different size");
             }
             total.push(row.to_vec());
@@ -21,8 +18,7 @@ impl<K: Debug> Matrix<K> {
     }
 }
 
-#[allow(dead_code)]
-impl<T: Debug> Matrix<T> {
+impl Matrix {
     /// Returns the shape of this [`Matrix<T>`] as a tuple (usize, usize).
     /// It does it by just comparing the size of the first row with the ammount of rows,
     /// so it assumes every row has equal lenght

@@ -1,28 +1,30 @@
-use core::fmt::Debug;
 pub mod ex00;
 
 /* STRUCTURE DEFINITION */
-pub struct Vector<K> {
-    array: Vec<K>,
+pub struct Vector {
+    array: Vec<f32>,
 }
 
 /* CONSTRUCTORS */
-impl<K> Vector<K>{
-    pub fn from_vec(values: Vec<K>) -> Self{
-        Self {array: values}
+impl Vector{
+    pub fn from_vec(values: Vec<f32>) -> Self {
+        Self { array: values }
     }
-    pub fn from(values: &[K]) -> Self where K: Copy
-    {
-        Self {array: values.to_vec()}
+    pub fn from(vec: &[f32]) -> Self{
+        Self { array: vec.to_vec() }
     }
 }
 
 /* METHOD IMPLEMENTATIONS */
-impl<K: Debug> Vector<K> {
-    pub fn push(&mut self, num: K) {
+impl Vector {
+    pub fn push(&mut self, num: f32) {
         self.array.push(num);
     }
     pub fn remove_last(&mut self) {
+        if self.size() == 0 {
+            //TO-DO Throw exeption
+            return;
+        }
         self.array.remove(self.array.len() - 1);
     }
     pub fn size(&self) -> usize {
@@ -32,5 +34,3 @@ impl<K: Debug> Vector<K> {
         println!("{:?}", &self.array);
     }
 }
-
-

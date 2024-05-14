@@ -2,7 +2,7 @@ all:
 	@cargo run #2>/dev/null //descomentar esta parte para que no haga output del debugeo
 
 test:
-	@cargo RUSTFLAGS=-Awarnings run --bin test #2>/dev/null
+	@cargo run --bin test #2>/dev/null
 
 ex00: 
 	@cargo run --bin ex00 #2>/dev/null

@@ -1,14 +1,28 @@
 use crate::vector::Vector;
-use core::fmt::Debug;
 
-impl<K: Debug> Vector<K>{
-    fn add(&mut self, v: &Vector<K>){
-
+impl Vector 
+{
+    pub fn add(&mut self, v: &Vector) {
+        if v.size() != self.size() {
+            //TO-DO throw exception
+            return;
+        }
+        for i in 0..self.size() {
+            self.array[i] = self.array[i] + v.array[i];
+        }
     }
-    fn sub(&mut self, v: &Vector<K>){
-
+    pub fn sub(&mut self, v: &Vector) {
+        if self.size() != v.size() {
+            //TO-DO throw exception
+            return;
+        }
+        for i in 0..self.size() {
+            self.array[i] = self.array[i] - v.array[i];
+        }
     }
-    fn scl(&mut self, a: K){
-        
+    pub fn scl(&mut self, a: f32) {
+        for i in 0..self.size() {
+            self.array[i] = a * self.array[i];
+        }
     }
 }
