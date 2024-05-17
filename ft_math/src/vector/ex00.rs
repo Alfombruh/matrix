@@ -4,7 +4,7 @@ impl Vector
 {
     pub fn add(&mut self, v: &Vector) {
         if v.size() != self.size() {
-            //TO-DO throw exception
+            println!("Vectors are of different sizes");
             return;
         }
         for i in 0..self.size() {
@@ -13,7 +13,7 @@ impl Vector
     }
     pub fn sub(&mut self, v: &Vector) {
         if self.size() != v.size() {
-            //TO-DO throw exception
+            println!("Vectors are of different sizes");
             return;
         }
         for i in 0..self.size() {

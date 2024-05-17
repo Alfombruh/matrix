@@ -1,10 +1,13 @@
+use crate::vector::Vector;
+pub mod ex00;
+pub mod ex01;
+
 pub struct Matrix {
     pub array: Vec<Vec<f32>>,
 }
 
 impl Matrix {
-    pub fn from(matrix: &[&[f32]]) -> Self
-    {
+    pub fn from(matrix: &[&[f32]]) -> Self {
         let mut total: Vec<Vec<f32>> = vec![];
         let len = matrix[0].len();
         for row in matrix {
@@ -15,6 +18,11 @@ impl Matrix {
             total.push(row.to_vec());
         }
         Self { array: total }
+    }
+    pub fn new(rows: usize, columns: usize) -> Self {
+        Self {
+            array: vec![vec![0.0; columns]; rows],
+        }
     }
 }
 
@@ -34,6 +42,18 @@ impl Matrix {
         return false;
     }
     pub fn print(&self) {
-            println!("{:?}", self.array)
+        println!("{:?}", self.array)
+    }
+    pub fn to_vec(&self) -> Vec<Vector> {
+        // Creates an iterator over the matrix's rows
+        // maps each row with a function that clones the row and then makes it into a vec
+        // collects each row and returns it in a Vec<Vector>
+        self.array
+            .iter()
+            .map(|row| Vector::from_vec(row.clone()))
+            .collect()
+    }
+    pub fn clone(&self) -> Matrix {
+        return Matrix { array: self.array.clone() };
     }
 }

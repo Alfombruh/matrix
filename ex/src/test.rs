@@ -8,7 +8,7 @@ fn vec_test(){
     let vect = Vector::from_vec(vec![11.567, -20.305]);
     print!("{}", "f64 vector -> ".red().bold());
     vect.print();
-    let mut vect = Vector::from(&[2, 3]);
+    let mut vect = Vector::from(&[2., 3.]);
     print!("{}", "i32 vector -> ".red().bold());
     vect.print();
     println!("{}{}{}", "Size of vector is -> ".purple().bold() ,vect.size() ,"\nNow adding new elements to the vector".purple().bold());

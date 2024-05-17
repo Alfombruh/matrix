@@ -1,4 +1,6 @@
+use crate::matrix::Matrix;
 pub mod ex00;
+pub mod ex01;
 
 /* STRUCTURE DEFINITION */
 pub struct Vector {
@@ -13,6 +15,9 @@ impl Vector{
     pub fn from(vec: &[f32]) -> Self{
         Self { array: vec.to_vec() }
     }
+    pub fn new(size: usize) -> Self{
+        Self { array: vec![0.0; size]}
+    }
 }
 
 /* METHOD IMPLEMENTATIONS */
@@ -22,7 +27,7 @@ impl Vector {
     }
     pub fn remove_last(&mut self) {
         if self.size() == 0 {
-            //TO-DO Throw exeption
+            println!("Vectors are of different sizes");
             return;
         }
         self.array.remove(self.array.len() - 1);
@@ -30,7 +35,13 @@ impl Vector {
     pub fn size(&self) -> usize {
         return self.array.len();
     }
+    pub fn to_matrix(&self) -> Matrix{
+        return Matrix::from(&[self.array.as_slice()]);
+    }
     pub fn print(&self) {
         println!("{:?}", &self.array);
+    }
+    pub fn clone(&self) -> Vector{
+        return Vector{array: self.array.clone()};
     }
 }
