@@ -10,6 +10,9 @@ ex00:
 ex01: 
 	@cargo run --bin ex01 #2>/dev/null
 
+ex02: 
+	@cargo run --bin ex02 #2>/dev/null
+
 optimize:
 	cargo run -- opt-level="3"
 
