@@ -38,6 +38,11 @@ fn vec_errors(){
     vect.remove_last();
 }
 
+fn matrix_test(){
+    let matt: Matrix = Matrix::from(&[&[1.]]);
+    matt.print();
+}
+
 // fn matrix_test(){
 //     let matr = Matrix::from(&[&[1, 2]]);
 //     matr.print();
@@ -49,4 +54,5 @@ fn vec_errors(){
 fn main(){
     vec_test();
     vec_errors();
+    matrix_test();
 }

@@ -1,8 +1,10 @@
 use crate::matrix::Matrix;
 pub mod ex00;
 pub mod ex01;
+pub mod ex03;
 
 /* STRUCTURE DEFINITION */
+#[derive(Debug)]
 pub struct Vector {
     array: Vec<f32>,
 }
@@ -43,5 +45,12 @@ impl Vector {
     }
     pub fn clone(&self) -> Vector{
         return Vector{array: self.array.clone()};
+    }
+}
+
+//MAKES THE CLASS PRINTEABLE WITH JUST {}
+impl std::fmt::Display for Vector {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        write!(f, "{:?}", self.array)
     }
 }

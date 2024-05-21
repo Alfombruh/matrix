@@ -1,25 +1,30 @@
-all: 
-	@cargo run #2>/dev/null //descomentar esta parte para que no haga output del debugeo
+BOLD_GREEN = \033[1;32m
+BOLD_YELLOW = \033[1;33m
+BOLD_RED = \033[1;31m
+BOLD_BLUE = \033[1;34m
+NO_COLOR = \033[0m
 
-test:
-	@cargo run --bin test #2>/dev/null
+%:
+	@echo "$(BOLD_BLUE)Running: cargo run --bin $@$(NO_COLOR)"
+	@cargo run --bin $@
 
-ex00: 
-	@cargo run --bin ex00 #2>/dev/null
+help:
+	@echo "$(BOLD_GREEN)Usage:$(NO_COLOR)"
+	@echo "$(BOLD_YELLOW)  make <target>  # Run a specific binary target$(NO_COLOR)"
+	@echo "$(BOLD_YELLOW)  make all           # Show this help message$(NO_COLOR)"
 
-ex01: 
-	@cargo run --bin ex01 #2>/dev/null
-
-ex02: 
-	@cargo run --bin ex02 #2>/dev/null
+all: help
 
 optimize:
+	@echo "$(BOLD_GREEN)Optimizing...🚀$(NO_COLOR)"
 	cargo run -- opt-level="3"
 
-build: 
+build:
+	@echo "$(BOLD_GREEN)Building...🏗️$(NO_COLOR)"
 	cargo build
 
 clean:
+	@echo "$(BOLD_RED)Cleaning up...🗑️$(NO_COLOR)"
 	rm -rf target
 
-.PHONY: library ex00 ex01 build clean
+.PHONY: help all optimize build clean

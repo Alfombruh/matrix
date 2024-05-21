@@ -57,3 +57,10 @@ impl Matrix {
         return Matrix { array: self.array.clone() };
     }
 }
+
+//MAKES THE CLASS PRINTEABLE WITH JUST {}
+impl std::fmt::Display for Matrix {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        write!(f, "{:?}", self.array)
+    }
+}

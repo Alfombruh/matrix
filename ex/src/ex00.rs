@@ -1,29 +1,38 @@
 use ft_math::{matrix::Matrix, vector::Vector};
 
 fn main() {
-    // let mut juan = Vector::from(&[31., 32.]);
-    // {
-    //     let this = &mut juan;
-    //     let v = Vector::from(&[33., 33., 33.]);
-    //     if v.size() != this.size() {
-    //         //TO-DO throw exception
-    //         return;
-    //     }
-    // };
-    let mut matt: Matrix = Matrix::from(&[&[1.2, 3.4], &[4.4, 5.7]]);
-    let matt2: Matrix = Matrix::from(&[&[6.2, -3.4], &[5.7, 2.2]]);
-    matt.add(&matt2);
-    matt.print();
-    // juan.push(33.);
-    // juan.print();
-    // println!("Lenght of the vector is {}", juan.size());
-    // juan.print();
-    // juan.remove_last();
-    // juan.print();
-    // juan.push(32.);
-    // juan.push(32.);
-    // juan.push(32.);
-    // juan.push(32.);
-    // juan.push(32.);
-    // juan.print();
+    let mut u = Vector::from(&[2., 3.]);
+    let v = Vector::from(&[5., 7.]);
+    u.add(&v);
+    println!("{}", u);
+    // [7.0]
+    // [10.0]
+    let mut u = Vector::from(&[2., 3.]);
+    let v = Vector::from(&[5., 7.]);
+    u.sub(&v);
+    println!("{}", u);
+    // [-3.0]
+    // [-4.0]
+    let mut u = Vector::from(&[2., 3.]);
+    u.scl(2.);
+    println!("{}", u);
+    // [4.0]
+    // [6.0]
+    let mut u = Matrix::from(&[&[1., 2.], &[3., 4.]]);
+    let v = Matrix::from(&[&[7., 4.], &[-2., 2.]]);
+    u.add(&v);
+    println!("{}", u);
+    // [8.0, 6.0]
+    // [1.0, 6.0]
+    let mut u = Matrix::from(&[&[1., 2.], &[3., 4.]]);
+    let v = Matrix::from(&[&[7., 4.], &[-2., 2.]]);
+    u.sub(&v);
+    println!("{}", u);
+    // [-6.0, -2.0]
+    // [5.0, 2.0]
+    let mut u = Matrix::from(&[&[1., 2.], &[3., 4.]]);
+    u.scl(2.);
+    println!("{}", u);
+    // [2.0, 4.0]
+    // [6.0, 8.0]
 }
