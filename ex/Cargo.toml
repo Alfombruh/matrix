@@ -32,3 +32,15 @@ name = "ex02"
 [[bin]]
 path = "src/ex03.rs"
 name = "ex03"
+
+[[bin]]
+path = "src/ex04.rs"
+name = "ex04"
+
+[[bin]]
+path = "src/ex05.rs"
+name = "ex05"
+
+[[bin]]
+path = "src/ex06.rs"
+name = "ex06"
