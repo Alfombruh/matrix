@@ -1,6 +1,7 @@
 use crate::vector::Vector;
 pub mod ex00;
 pub mod ex01;
+pub mod ex07;
 
 pub struct Matrix {
     pub array: Vec<Vec<f32>>,
