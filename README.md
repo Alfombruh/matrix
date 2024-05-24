@@ -49,3 +49,27 @@ It is defined by 2 characteristics:
 
 When it comes to explaining what a matrix is it is not that difficult to understand. A matrix a mathematical object used to store values in a rectangular array/table.</br>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/MatrixLabelled.svg/2880px-MatrixLabelled.svg.png" alt="Wikipedia Matrix" width="400px">
+
+## How Im representing them?
+I've quickly explained what a Vector and a Matrix are but I havent gotten into planes, vector spaces...</br>
+To quickly explain this. We can define a plane as a 2D space, like the X/Y axis.</br>
+If we were to speak of a 3D vector, we would be talking about 3 axis (X/Y/Z). X, Y and Z are perpendicular and make a plane between each other.</br>
+What I just explained can happend is not just fixed to 3 diomensions. So technically a vector can have N elements, N being the amount of dimensions it is represented in.</br>
+</br>
+So taking this into consideration we can represent a vector as an N sized array and a Matrix as N sized N sized arrays, aka and array and a double array.</br>
+In Rust language:</br>
+``````
+pub struct Vector {
+    pub array: Vec<f32>,
+}
+pub struct Matrix {
+    pub array: Vec<Vec<f32>>,
+}
+``````
+I would recommend making a couple methods first to interact with the data.
+- Push: To add new elements to the array
+- Remove: To remove the last element of the array
+- Size: To get the size of the array
+- from: To create that class
+- Print: To print the array (this is achieved by an implementation)
+- Clone: This will come in handy. You can also write this on top of the struct <code>#[derive(Clone)]</code> in order to have the compiler provide you a basic a clone implementation.
