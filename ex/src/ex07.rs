@@ -1,4 +1,4 @@
-use ft_math::{matrix::{ex07, Matrix}, vector::Vector};
+use ft_math::{matrix::Matrix, vector::Vector};
 
 fn main() {
     let mut u = Matrix::from(&[&[1., 0.], &[0., 1.]]);

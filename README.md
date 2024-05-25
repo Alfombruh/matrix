@@ -116,10 +116,10 @@ Operating with matrices is really easy and kind of works like the vector additio
 Lets define two matrices $A = \begin{bmatrix} A_{00} \ A_{01} \ A_{02} \\ A_{10} \ A_{11} \ A_{12} \\ A_{20} \ A_{21} \ A_{22}\end{bmatrix}$ and $B = \begin{bmatrix} B_{00} \ B_{01} \ B_{02} \\ B_{10} \ B_{11} \ B_{12} \\ B_{20} \ B_{21} \ B_{22}\end{bmatrix}$</br>
 The addition or subtraction of these 2 matrixes would result in a new matrix $C$ of which each position ($C_{nm}$)would be the operation performed between the two values on the same position of each relative matrix ($A_{nm} \pm B_{nm}$).</br>
 Lets see how this $C$ matrix would be:
-$C = \begin{bmatrix} C_{00} \ C_{01} \ C_{02} \\ C_{10} \ C_{11} \ C_{12} \\ C_{20} \ C_{21} \ C_{22}\end{bmatrix}$ where $C_{nm} = A_{nm} \pm B_{nm}$ so the lets see the operation matrix 
+$C = \begin{bmatrix} C_{00} \ C_{01} \ C_{02} \\\ C_{10} \ C_{11} \ C_{12} \\\ C_{20} \ C_{21} \ C_{22}\end{bmatrix}$ where $C_{nm} = A_{nm} \pm B_{nm}$ so the lets see the operation matrix 
 $\implies$ $C = \begin{bmatrix} 
-(A_{00} \pm B_{00}) \ (A_{01} \pm B_{01}) \ (A_{02} \pm B_{02}) \\
-(A_{10} \pm B_{10}) \ (A_{11} \pm B_{11}) \ (A_{12} \pm B_{12}) \\
+(A_{00} \pm B_{00}) \ (A_{01} \pm B_{01}) \ (A_{02} \pm B_{02}) \\\
+(A_{10} \pm B_{10}) \ (A_{11} \pm B_{11}) \ (A_{12} \pm B_{12}) \\\
 (A_{20} \pm B_{20}) \ (A_{21} \pm B_{21}) \ (A_{22} \pm B_{22})
 \end{bmatrix}$
 
@@ -127,8 +127,8 @@ $\implies$ $C = \begin{bmatrix}
 Scaling a matrix is just like scaling a vector, where you have to multiply each component by the scalar (number) you want to scale it for.</br>
 So if we define $\alpha \in [-\infty, +\infty]$ (AKA any real number although it also applies to imaginary ones) and the same $C$ matrix as before we can compute the scaled matrix $M = \alpha C$ as:</br>
 $M = \begin{bmatrix} 
-\alpha C_{00} \ \alpha C_{01} \ \alpha C_{02} \\
-\alpha C_{10} \ \alpha C_{11} \ \alpha C_{12} \\
+\alpha C_{00} \ \alpha C_{01} \ \alpha C_{02} \\\
+\alpha C_{10} \ \alpha C_{11} \ \alpha C_{12} \\\
 \alpha C_{20} \ \alpha C_{21} \ \alpha C_{22}
 \end{bmatrix}$
 
