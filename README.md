@@ -139,7 +139,7 @@ A linear cobination is a operations that adds 2 in order to get a new one (still
 So in order to get the linear combination of two vectors you have to multiply each one with a scalar (scalar is the noun used to refer to numbers that are not vectors) and then add both. It would look something like this:</br>
 
 $\alpha\overline{u} + \beta\overline{v} + \lambda\overline{w} = (\alpha u_{1}, \alpha u_{2}, \alpha u_{3}) + (\beta v_{1}, \beta v_{2}, \beta v_{3}) + (\lambda w_{1}, \lambda w_{2}, \lambda w_{3})$</br>
-$\alpha\overline{u} + \beta\overline{v} + \lambda\overline{w} =(\alpha u_{1} + \beta v_{1} + \lambda w_{1},\alpha u_{2} + \beta v_{2} + \lambda w_{2}, \alpha u_{3} + \beta v_{3} + \lambda w_{3})$</br>
+$$\alpha\overline{u} + \beta\overline{v} + \lambda\overline{w} =(\alpha u_{1} + \beta v_{1} + \lambda w_{1},\alpha u_{2} + \beta v_{2} + \lambda w_{2}, \alpha u_{3} + \beta v_{3} + \lambda w_{3})$$</br>
 
 The result of the operation is a new vector.
 
