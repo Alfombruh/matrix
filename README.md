@@ -90,7 +90,9 @@ I would recommend making a couple methods first to interact with the data.
 - Clone: This will come in handy. You can also write this on top of the struct <code>#[derive(Clone)]</code> in order to have the compiler provide you a basic a clone implementation.</br>
 
 # ex00 - Add, Subtract and Scale<a name="ex00"></a>
-Basic operations with vectors are pretty easy, you can probably guess how they are done. But lets get into them, to really understand how to perform these operations.</br>
+Basic operations with vectors are pretty easy, you can probably guess how they are done. But lets get into them, to really understand how to perform these operations.</br></br>
+On a quick note, in order to operate with vectors they have to be in the same vectorial space. So you cannot add or subtract a 3D vector from a 2D vector.</br>Although you can think of a $N$ dimensional vector as a $M$ dimensional vector with a value $0$ in the other dimensions, where $N < M$.</br>
+For example a 2D vector $\overline{u}_{2}=(2,3)$ can be understood as a 3D vector $\overline{u}_{3}=(2,3, 0)$. This can only be done from less to more dimensions and not the other way as you'd be losing information.</br>
 ## Adding and Subtracting two vectors<a name="vectoraddsub"></a>
 Lets declare two generic vectors  $\overline{u}=(u_{x}, u_{y}, u_{z})$ & $\overline{v}=(v_{x}, v_{y}, v_{z})$</br>
 Adding them would be as easy as adding each $\overline{u}$ component with each $\overline{v}$ componet. It would be something like this:</br>
@@ -107,11 +109,34 @@ The addition of two vector gives out another new one $\overline{w}$ ($\overline{
 Now when it comes to scaling a vector, we can visualize it as "making the arrow larger".</br>
 So if we had $\overline{u}=(1,2,3)$ and we wanted to scale it by $2$ we would just do this: $\overline{u} * 2 = (1 * 2, 2 * 2, 3 * 2) = (2, 4, 6)$</br>
 <img src="./assets/00_scale.png" alt="Vector Sub1" width="600px"></br>
+## Now, Matrices<a name="matrixnow"></a>
+Operating with matrices is really easy and kind of works like the vector addition, subtraction and scaling.</br>Just as with vectors, where they belong to the same vector space in order to operate with them, matrix must also be of the same dimensions in order to be added/subtracted, this meaning that they have to have the same number of rows and colums.</br> Now that got this clear, lets jump into this.
+
+### Adding and subtracting Matrices
+Lets define two matrices $A = \begin{bmatrix} A_{00} \ A_{01} \ A_{02} \\ A_{10} \ A_{11} \ A_{12} \\ A_{20} \ A_{21} \ A_{22}\end{bmatrix}$ and $B = \begin{bmatrix} B_{00} \ B_{01} \ B_{02} \\ B_{10} \ B_{11} \ B_{12} \\ B_{20} \ B_{21} \ B_{22}\end{bmatrix}$</br>
+The addition or subtraction of these 2 matrixes would result in a new matrix $C$ of which each position ($C_{nm}$)would be the operation performed between the two values on the same position of each relative matrix ($A_{nm} \pm B_{nm}$).</br>
+Lets see how this $C$ matrix would be:
+$C = \begin{bmatrix} C_{00} \ C_{01} \ C_{02} \\ C_{10} \ C_{11} \ C_{12} \\ C_{20} \ C_{21} \ C_{22}\end{bmatrix}$ where $C_{nm} = A_{nm} \pm B_{nm}$ so the lets see the operation matrix 
+$\implies$ $C = \begin{bmatrix} 
+(A_{00} \pm B_{00}) \ (A_{01} \pm B_{01}) \ (A_{02} \pm B_{02}) \\
+(A_{10} \pm B_{10}) \ (A_{11} \pm B_{11}) \ (A_{12} \pm B_{12}) \\
+(A_{20} \pm B_{20}) \ (A_{21} \pm B_{21}) \ (A_{22} \pm B_{22})
+\end{bmatrix}$
+
+### Scaling a matrix
+Scaling a matrix is just like scaling a vector, where you have to multiply each component by the scalar (number) you want to scale it for.</br>
+So if we define $\alpha \in [-\infty, +\infty]$ (AKA any real number although it also applies to imaginary ones) and the same $C$ matrix as before we can compute the scaled matrix $M = \alpha C$ as:</br>
+$M = \begin{bmatrix} 
+\alpha C_{00} \ \alpha C_{01} \ \alpha C_{02} \\
+\alpha C_{10} \ \alpha C_{11} \ \alpha C_{12} \\
+\alpha C_{20} \ \alpha C_{21} \ \alpha C_{22}
+\end{bmatrix}$
+
 
 # ex01 - Linear combination<a name="ex01"></a>
 
-A linear cobination if a way of adding vectors to get a new one (still inside of the same vectorial space).</br>
-So in order to get a linear combination you have to multiply each vector with a scalar (scalar is the noun used to refer to numbers that are not vectors) and then add them all together. It would be something like this:</br>
+A linear cobination is a operations that adds 2 in order to get a new one (still inside of the same vectorial space).</br>
+So in order to get the linear combination of two vectors you have to multiply each one with a scalar (scalar is the noun used to refer to numbers that are not vectors) and then add both. It would look something like this:</br>
 
 $\alpha\overline{u} + \beta\overline{v} + \lambda\overline{w} = (\alpha u_{1}, \alpha u_{2}, \alpha u_{3}) + (\beta v_{1}, \beta v_{2}, \beta v_{3}) + (\lambda w_{1}, \lambda w_{2}, \lambda w_{3})$</br>
 $\alpha\overline{u} + \beta\overline{v} + \lambda\overline{w} =(\alpha u_{1} + \beta v_{1} + \lambda w_{1},\alpha u_{2} + \beta v_{2} + \lambda w_{2}, \alpha u_{3} + \beta v_{3} + \lambda w_{3})$</br>
@@ -119,3 +144,9 @@ $\alpha\overline{u} + \beta\overline{v} + \lambda\overline{w} =(\alpha u_{1} + \
 The result of the operation is a new vector.
 
 # ex02 - Linear interpolation<a name="ex02"></a>
+In this exercise we have to make a function that returns the linear interpolation between 2 objects, let these be Vectors, Matrices or just numbers.</br>
+What a linear interpolation is in terms of understanding it, is really simple. You have 2 objects and a coefficient. The coefficient must be a real number between 1 and 0 ($c \in [0;1]$)</br>
+You have to add those items, the first one scaled by the coefficient and the other one by $1 - coefficient$ so that the two scalars add up to one. This way you get a "point" thats between those 2 objects. Altough you always get a value thats between the segment those 2 objects make, if you were to take any value for the coefficient, you would get any point in the infinite line drawn by the two objects</br>
+//TODO Add image</br>
+So the operation would look something like this:</br>
+$cV_{1} + (1 - c)V_{2}$
