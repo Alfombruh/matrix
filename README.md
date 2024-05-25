@@ -108,12 +108,12 @@ The addition of two vector gives out another new one $\overline{w}$ ($\overline{
 ## Scaling a vector<a name="vectorscale"></a>
 Now when it comes to scaling a vector, we can visualize it as "making the arrow larger".</br>
 So if we had $\overline{u}=(1,2,3)$ and we wanted to scale it by $2$ we would just do this: $\overline{u} * 2 = (1 * 2, 2 * 2, 3 * 2) = (2, 4, 6)$</br>
-<img src="./assets/00_scale.png" alt="Vector Sub1" width="600px"></br>
+<img src="./assets/00_scale.png" alt="Vector scale" width="600px"></br>
 ## Now, Matrices<a name="matrixnow"></a>
 Operating with matrices is really easy and kind of works like the vector addition, subtraction and scaling.</br>Just as with vectors, where they belong to the same vector space in order to operate with them, matrix must also be of the same dimensions in order to be added/subtracted, this meaning that they have to have the same number of rows and colums.</br> Now that got this clear, lets jump into this.
 
 ### Adding and subtracting Matrices
-Lets define two matrices $A = \begin{bmatrix} A_{00} \ A_{01} \ A_{02} \\ A_{10} \ A_{11} \ A_{12} \\ A_{20} \ A_{21} \ A_{22}\end{bmatrix}$ and $B = \begin{bmatrix} B_{00} \ B_{01} \ B_{02} \\ B_{10} \ B_{11} \ B_{12} \\ B_{20} \ B_{21} \ B_{22}\end{bmatrix}$</br>
+Lets define two matrices $A = \begin{bmatrix} A_{00} \ A_{01} \ A_{02} \\ A_{10} \ A_{11} \ A_{12} \\\ A_{20} \ A_{21} \ A_{22}\end{bmatrix}$ and $B = \begin{bmatrix} B_{00} \ B_{01} \ B_{02} \\\ B_{10} \ B_{11} \ B_{12} \\\ B_{20} \ B_{21} \ B_{22}\end{bmatrix}$</br>
 The addition or subtraction of these 2 matrixes would result in a new matrix $C$ of which each position ($C_{nm}$)would be the operation performed between the two values on the same position of each relative matrix ($A_{nm} \pm B_{nm}$).</br>
 Lets see how this $C$ matrix would be:
 $C = \begin{bmatrix} C_{00} \ C_{01} \ C_{02} \\\ C_{10} \ C_{11} \ C_{12} \\\ C_{20} \ C_{21} \ C_{22}\end{bmatrix}$ where $C_{nm} = A_{nm} \pm B_{nm}$ so the lets see the operation matrix 
