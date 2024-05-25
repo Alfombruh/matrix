@@ -126,11 +126,11 @@ $\implies$ $C = \begin{bmatrix}
 ### Scaling a matrix
 Scaling a matrix is just like scaling a vector, where you have to multiply each component by the scalar (number) you want to scale it for.</br>
 So if we define $\alpha \in [-\infty, +\infty]$ (AKA any real number although it also applies to imaginary ones) and the same $C$ matrix as before we can compute the scaled matrix $M = \alpha C$ as:</br>
-$M = \begin{bmatrix} 
+$$M = \begin{bmatrix} 
 \alpha C_{00} \ \alpha C_{01} \ \alpha C_{02} \\\
 \alpha C_{10} \ \alpha C_{11} \ \alpha C_{12} \\\
 \alpha C_{20} \ \alpha C_{21} \ \alpha C_{22}
-\end{bmatrix}$
+\end{bmatrix}$$
 
 
 # ex01 - Linear combination<a name="ex01"></a>
@@ -139,7 +139,7 @@ A linear cobination is a operations that adds 2 in order to get a new one (still
 So in order to get the linear combination of two vectors you have to multiply each one with a scalar (scalar is the noun used to refer to numbers that are not vectors) and then add both. It would look something like this:</br>
 
 $\alpha\overline{u} + \beta\overline{v} + \lambda\overline{w} = (\alpha u_{1}, \alpha u_{2}, \alpha u_{3}) + (\beta v_{1}, \beta v_{2}, \beta v_{3}) + (\lambda w_{1}, \lambda w_{2}, \lambda w_{3})$</br>
-$$\alpha\overline{u} + \beta\overline{v} + \lambda\overline{w} =(\alpha u_{1} + \beta v_{1} + \lambda w_{1},\alpha u_{2} + \beta v_{2} + \lambda w_{2}, \alpha u_{3} + \beta v_{3} + \lambda w_{3})$$</br>
+$\alpha\overline{u} + \beta\overline{v} + \lambda\overline{w} =(\alpha u_{1} + \beta v_{1} + \lambda w_{1},\alpha u_{2} + \beta v_{2} + \lambda w_{2}, \alpha u_{3} + \beta v_{3} + \lambda w_{3})$</br>
 
 The result of the operation is a new vector.
 
