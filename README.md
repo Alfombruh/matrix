@@ -127,10 +127,7 @@ $\implies$ $C = \begin{bmatrix}
 Scaling a matrix is just like scaling a vector, where you have to multiply each component by the scalar (number) you want to scale it for.</br>
 So if we define $\alpha \in [-\infty, +\infty]$ (AKA any real number although it also applies to imaginary ones) and the same $C$ matrix as before we can compute the scaled matrix $M = \alpha C$ as:</br>
 $M = \begin{matrix} 
-\alpha C_{00} \ \alpha C_{01} \ \alpha C_{02} \\\
-\alpha C_{10} \ \alpha C_{11} \ \alpha C_{12} \\\
-\alpha C_{20} \ \alpha C_{21} \ \alpha C_{22}
-\end{matrix}$
+\alpha C_{00} \ \alpha C_{01} \ \alpha C_{02} \\\ \alpha C_{10} \ \alpha C_{11} \ \alpha C_{12} \\\ \alpha C_{20} \ \alpha C_{21} \ \alpha C_{22} \end{matrix}$
 
 
 # ex01 - Linear combination<a name="ex01"></a>
