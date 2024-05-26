@@ -123,7 +123,7 @@ B = \begin{bmatrix} B_{00} \ B_{01} \ B_{02} \\\ B_{10} \ B_{11} \ B_{12} \\\ B_
 The addition or subtraction of these 2 matrixes would result in a new matrix $C$ of which each position ($C_{nm}$)would be the operation performed between the two values on the same position of each relative matrix ($A_{nm} \pm B_{nm}$).</br>
 Lets see how this $C$ matrix would be:
 ```math
-C = \begin{bmatrix} C_{00} \ C_{01} \ C_{02} \\\ C_{10} \ C_{11} \ C_{12} \\\ C_{20} \ C_{21} \ C_{22}\end{bmatrix}$ where $C_{nm} = A_{nm} \pm B_{nm}
+C = \begin{bmatrix} C_{00} \ C_{01} \ C_{02} \\\ C_{10} \ C_{11} \ C_{12} \\\ C_{20} \ C_{21} \ C_{22}\end{bmatrix} \implies C_{nm} = A_{nm} \pm B_{nm}
 ```
 so the lets see the operation matrix 
 ```math
