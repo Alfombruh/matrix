@@ -146,3 +146,9 @@ You have to add those items, the first one scaled by the coefficient and the oth
 //TODO Add image</br>
 So the operation would look something like this:</br>
 $cV_{1} + (1 - c)V_{2}$
+</br>
+Test:</br>
+```math
+\begin{bmatrix}X\\Y\end{bmatrix}
+```
+$\begin{bmatrix}X\\Y\end{bmatrix}$
