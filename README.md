@@ -113,11 +113,10 @@ So if we had $\overline{u}=(1,2,3)$ and we wanted to scale it by $2$ we would ju
 Operating with matrices is really easy and kind of works like the vector addition, subtraction and scaling.</br>Just as with vectors, where they belong to the same vector space in order to operate with them, matrix must also be of the same dimensions in order to be added/subtracted, this meaning that they have to have the same number of rows and colums.</br> Now that got this clear, lets jump into this.
 
 ### Adding and subtracting Matrices
-Lets define two matrices 
+Lets define two matrices:
 ```math
 A = \begin{bmatrix} A_{00} \ A_{01} \ A_{02} \\ A_{10} \ A_{11} \ A_{12} \\\ A_{20} \ A_{21} \ A_{22}\end{bmatrix}
 ```
-and 
 ```math
 B = \begin{bmatrix} B_{00} \ B_{01} \ B_{02} \\\ B_{10} \ B_{11} \ B_{12} \\\ B_{20} \ B_{21} \ B_{22}\end{bmatrix}</br>
 ```
@@ -128,7 +127,7 @@ C = \begin{bmatrix} C_{00} \ C_{01} \ C_{02} \\\ C_{10} \ C_{11} \ C_{12} \\\ C_
 ```
 so the lets see the operation matrix 
 ```math
-\implies$ C = \begin{bmatrix} 
+C = \begin{bmatrix} 
 (A_{00} \pm B_{00}) \ (A_{01} \pm B_{01}) \ (A_{02} \pm B_{02}) \\\
 (A_{10} \pm B_{10}) \ (A_{11} \pm B_{11}) \ (A_{12} \pm B_{12}) \\\
 (A_{20} \pm B_{20}) \ (A_{21} \pm B_{21}) \ (A_{22} \pm B_{22})
@@ -139,7 +138,7 @@ so the lets see the operation matrix
 Scaling a matrix is just like scaling a vector, where you have to multiply each component by the scalar (number) you want to scale it for.</br>
 So if we define $\alpha \in [-\infty, +\infty]$ (AKA any real number although it also applies to imaginary ones) and the same $C$ matrix as before we can compute the scaled matrix $M = \alpha C$ as:</br>
 ```math
-M = \begin{matrix} \alpha C_{00} \ \alpha C_{01} \ \alpha C_{02} \\\ \alpha C_{10} \ \alpha C_{11} \ \alpha C_{12} \\\ \alpha C_{20} \ \alpha C_{21} \ \alpha C_{22} \end{matrix}
+M = \begin{bmatrix} \alpha C_{00} \ \alpha C_{01} \ \alpha C_{02} \\\ \alpha C_{10} \ \alpha C_{11} \ \alpha C_{12} \\\ \alpha C_{20} \ \alpha C_{21} \ \alpha C_{22} \end{bmatrix}
 ```
 
 
@@ -161,8 +160,3 @@ You have to add those items, the first one scaled by the coefficient and the oth
 So the operation would look something like this:</br>
 $cV_{1} + (1 - c)V_{2}$
 </br>
-Test:</br>
-```math
-\begin{bmatrix}X\\Y\end{bmatrix}
-```
-$\begin{bmatrix}X\\Y\end{bmatrix}$
