@@ -165,7 +165,7 @@ $cV_{1} + (1 - c)V_{2}$
 In this exercise we have to compute the dot product between 2 vectors of the same dimentions.</br>
 What this really does is multipliying the module of $\overline{u}$ and module of the projection of $\overline{v}$ on $\overline{u}$.</br>
 Lets specify this a little bit more specific:</br>
-We have 2 vectors $\overline{u}$ & $\overline{v}$, they are both inside of the same vectorial space $V$, which is finite, and they are both composed of real numbers ($\real$).</br></br>
+We have 2 vectors $\overline{u}$ & $\overline{v}$, they are both inside of the same vectorial space $V$, which is finite, and they are both composed of real numbers (${\rm I\!R}$).</br></br>
 To understand this we are gonna first understand what the projection of a vector is.</br>
 Lets define $\overline{u} = (1,1)$, if we were to have the projection of $\overline{u}$ over the $x$ axis, it would just be $1$, as its $x$ component is $1$. If we had a vector $\overline{v} = (3,5)$ its projection on the $y$ axis would be $5$ and $3$ on the $x$ axis.</br></br>
 We can rearange how we think of the $x$/$y$ axis and rethink of them as two vectors. $\overline{i} = (1, 0)$ as the $x$ axis and $\overline{j} = (0, 1)$ as the $y$ axis, as we can write any vector in a 2 dimensional space as a linear combination of $\overline{i}$ and $\overline{j}$</br>. In this case the projection of the vector of $\overline{v} = (3,5)$ over $\overline{i}$ would still be $3$ and over $\overline{j}$ would be $5$.</br></br>
