@@ -160,3 +160,28 @@ You have to add those items, the first one scaled by the coefficient and the oth
 So the operation would look something like this:</br>
 $cV_{1} + (1 - c)V_{2}$
 </br>
+
+# ex03 - Dot product<a name="ex03"></a>
+In this exercise we have to compute the dot product between 2 vectors of the same dimentions.</br>
+What this really does is multipliying the module of $\overline{u}$ and module of the projection of $\overline{v}$ on $\overline{u}$.</br>
+Lets specify this a little bit more specific:</br>
+We have 2 vectors $\overline{u}$ & $\overline{v}$, they are both inside of the same vectorial space $V$, which is finite, and they are both composed of real numbers ($\real$).</br></br>
+To understand this we are gonna first understand what the projection of a vector is.</br>
+Lets define $\overline{u} = (1,1)$, if we were to have the projection of $\overline{u}$ over the $x$ axis, it would just be $1$, as its $x$ component is $1$. If we had a vector $\overline{v} = (3,5)$ its projection on the $y$ axis would be $5$ and $3$ on the $x$ axis.</br></br>
+We can rearange how we think of the $x$/$y$ axis and rethink of them as two vectors. $\overline{i} = (1, 0)$ as the $x$ axis and $\overline{j} = (0, 1)$ as the $y$ axis, as we can write any vector in a 2 dimensional space as a linear combination of $\overline{i}$ and $\overline{j}$</br>. In this case the projection of the vector of $\overline{v} = (3,5)$ over $\overline{i}$ would still be $3$ and over $\overline{j}$ would be $5$.</br></br>
+Ok now we can finally get into how to get the Dot product between two vectors:</br>
+We can think of the projection of a vector $\overline{u}$ on $\overline{v}$ as we did with $\overline{u}$ on the $\overline{i}$/$\overline{j}$ vectors. The problem is that there was not mathematical proof of what we did, we just kind of agreed it made sense, so now Im gonna explain on concept and then we are gonna be using one of the most famous theorems...
+
+### The Pythagorean theorem
+Ok I'm not gonna go deeper into this, so if you want me to prove this you can just do some research for yourself as this is theorem is probably a little bit older than you.</br>[You lazy fuck](#https://en.wikipedia.org/wiki/Pythagorean_theorem)</br></br>
+If we have two vectors $\overline{u} = (x_{u}, y_{u})$ and $\overline{v} = (x_{v}, y_{v})$ we can write a right triangle in which the angle $\alpha$ as the angle between $\overline{u}$ and $\overline{v}$.</br>
+In this triangle we already know $\alpha$, but we need to other componenets. The hypotenuse is the module of $\overline{v}$. To get the value of the two other side (the catheti) is really easy to guess.</br>
+By defining the $cosine$ of $\alpha$ as $cos(\alpha)=(\frac{b}{h})$, as $h$ is the hypotenuse which we can get by calculating the module of the vector $\overline{v}$ which you can get with the Pythagorean theorem $\implies h = \sqrt{x_{v}^2 + y_{v}^2}\implies |\overline{v}| = h$.</br>
+We wanna know the value of $b$ as is the only value missing and is also the projection of $\overline{v}$ on $\overline{u}$. With a little bit of imagination we can do this:</br>
+$cos(\alpha)=(\frac{b}{h})\implies h * cos(\alpha) = b \implies |\overline{v}| * cos(\alpha) = b$</br>
+This is how we get the module of the projection of the $\overline{v}$ on $\overline{u}$, now we just have the get the module of $\overline{u}$ which I already explained is done by the Pythagorean theorem (the module calculation is gonna get explain in ex04 more in depth). So we can guess that the dot product of two vectors can be written like this:</br>
+$\overline{u}*\overline{v}=|\overline{u}||\overline{v}|cos(\alpha_{\hat{uv}})$</br>
+<img src="./assets/03_dot.png"></img>
+
+# ex04 - Norm<a name="ex04"></a>
+
